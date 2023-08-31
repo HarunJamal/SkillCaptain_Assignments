@@ -1,6 +1,3 @@
-import java.util.*;
-import java.lang.reflect.Field;
-
 public class Day2 {
     public static void main(String[] args){
         byte a = 12;
