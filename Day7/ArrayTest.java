@@ -39,6 +39,6 @@ public class ArrayTest{
         System.out.println("Average: " + avg);
         System.out.println("Minimum: " + min);
         System.out.println("Maximum: " + max);
-
+        input.close();
     }
 }
