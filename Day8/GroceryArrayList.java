@@ -15,7 +15,11 @@ public class GroceryArrayList {
         System.out.println("Choose from the following operations:\n1. add item\n2. remove an item\n3. Print Grocery list\n4. Item Check\n5. Clear grocery list \n6. Terminate");
         switch (x) {
             case 1:
-                Sca
+            {
+            System.out.println("Enter item:");
+            String thenga = input.nextLine();
+            groceries.add(thenga);
+            }
                 break;
             case 2:
                 
