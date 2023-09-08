@@ -14,8 +14,9 @@ public class FrequencyOfWordMap{
 
         input.close();
         
-        String[] words = para.split(" ");
+        String[] words = para.split("[,.\\s]+");
         for (String word : words){
+            word = word.toLowerCase();   // converting all to lowercase because same word starting with capital letter will be counted as a different word otherwise
             if (WordCounter.containsKey(word)){
                 int curval = WordCounter.get(word);
                 WordCounter.put(word, curval + 1);
