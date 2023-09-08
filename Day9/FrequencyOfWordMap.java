@@ -10,13 +10,12 @@ public class FrequencyOfWordMap{
 
         System.out.println("Enter the paragraph:");
         String para = input.nextLine();
-        System.out.println("nice paragraph");
-
+        input.nextLine();   // consoom newline
         input.close();
         
-        String[] words = para.split("[,.\\s]+");
+        String[] words = para.split("[,.\\s]+");  // ignores commas and period in paragraph, count only word
         for (String word : words){
-            word = word.toLowerCase();   // converting all to lowercase because same word starting with capital letter will be counted as a different word otherwise
+            word = word.toLowerCase();   // capital letter, small letter of same word will be be counted as different words otherwise
             if (WordCounter.containsKey(word)){
                 int curval = WordCounter.get(word);
                 WordCounter.put(word, curval + 1);
