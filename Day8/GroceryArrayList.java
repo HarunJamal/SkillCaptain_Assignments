@@ -32,16 +32,15 @@ public class GroceryArrayList {
                 break;
 
             case 5:
-                clearGrocery();
+            clearGrocery();
                 break;
             
             case 6:
             System.out.println("grocery list terminated");
-                System.exit(0);
+            System.exit(0);
 
             default:
             System.out.println("Invalid operation (press number between 1 - 6)");
-            break;
             
             }
             
