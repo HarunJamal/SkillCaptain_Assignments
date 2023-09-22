@@ -221,7 +221,7 @@ public class VehicleInventory {
                             scanner.nextLine();
                             fuelType = scanner.nextLine();
                             mileage = 0.0f;
-                            Car newvehicle = new Car(VehicleID5Search, make, model, year, numDoors, fuelType, mileage);
+                            Car newvehicle = new Car(vehicle.vehicleID, make, model, year, numDoors, fuelType, mileage);
                             inventory.set(index, newvehicle);
                         }
                         else if(vehicle instanceof Motorcycle){
@@ -238,7 +238,7 @@ public class VehicleInventory {
                             scanner.nextLine();
                             engineCapacity = scanner.nextInt();
                             avgspeed = 0.0f;
-                            Motorcycle newvehicle = new Motorcycle(VehicleID5Search, make, model, year, hasSidecar, engineCapacity, avgspeed);
+                            Motorcycle newvehicle = new Motorcycle(vehicle.vehicleID, make, model, year, hasSidecar, engineCapacity, avgspeed);
                             inventory.set(index, newvehicle);
                         }  
                     }
