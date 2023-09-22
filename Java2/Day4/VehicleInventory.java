@@ -205,11 +205,41 @@ public class VehicleInventory {
 
                 for (Vehicle vehicle : inventory) {
                     if (vehicle.vehicleID == VehicleID5Search ) {
+                        int index = inventory.indexOf(vehicle);
+                        
                         if (vehicle instanceof Car){
-                            
+                            System.out.println("Enter new make of car: ");
+                            scanner.nextLine();
+                            make = scanner.nextLine();
+                            System.out.println("Enter new model of car: ");
+                            model = scanner.nextLine();
+                            System.out.println("Enter new year of car: ");
+                            year = scanner.nextInt();
+                            System.out.println("Enter new number of doors in car: ");
+                            numDoors = scanner.nextInt();
+                            System.out.println("Enter new fuel type of car: ");
+                            scanner.nextLine();
+                            fuelType = scanner.nextLine();
+                            mileage = 0.0f;
+                            Car newvehicle = new Car(VehicleID5Search, make, model, year, numDoors, fuelType, mileage);
+                            inventory.set(index, newvehicle);
                         }
                         else if(vehicle instanceof Motorcycle){
-                            
+                            System.out.println("Enter new make of motorcycle: ");
+                            scanner.nextLine();
+                            make = scanner.nextLine();
+                            System.out.println("Enter new model of motorcycle: ");
+                            model = scanner.nextLine();
+                            System.out.println("Enter new year of motorcycle: ");
+                            year = scanner.nextInt();
+                            System.out.println("Enter if new motorbike has sidecar (true/false): ");
+                            hasSidecar = scanner.nextBoolean();
+                            System.out.println("Enter new Engine Capacity (in cc): ");
+                            scanner.nextLine();
+                            engineCapacity = scanner.nextInt();
+                            avgspeed = 0.0f;
+                            Motorcycle newvehicle = new Motorcycle(VehicleID5Search, make, model, year, hasSidecar, engineCapacity, avgspeed);
+                            inventory.set(index, newvehicle);
                         }  
                     }
                 
