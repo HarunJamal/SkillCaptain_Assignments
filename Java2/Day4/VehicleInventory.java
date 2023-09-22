@@ -18,7 +18,7 @@ abstract class Vehicle {
 
     abstract void displayDetails();
 
-    /*abstract void enterDetails();*/
+    abstract void enterDetails();
 }
 
 class Car extends Vehicle {
@@ -33,17 +33,19 @@ class Car extends Vehicle {
         this.mileage = calculateMileage();
     }
 
-  /*   @Override
+   @Override
     void enterDetails() {
 
         System.out.println("Enter number of doors: ");
-        numDoors = input.nextInt();
+        this.numDoors = input.nextInt();
         input.nextLine(); 
 
         System.out.println("Enter type of fuel: ");
-        fuelType = input.nextLine();
+        this.fuelType = input.nextLine();
+
+        this.mileage = calculateMileage();
     }
-  */
+  
     @Override
     void displayDetails() {
         System.out.println("Car Details\n-------------------");
@@ -82,15 +84,17 @@ class Motorcycle extends Vehicle {
         this.avgspeed = calculateSpeed();
     }
 
-    /*@Override
+    @Override
     void enterDetails() { 
 
         System.out.println("Does the bike have a sidecar? (Enter true or false): ");
-        hasSidecar = input.nextBoolean();
+        this.hasSidecar = input.nextBoolean();
         System.out.println("Enter engine capacity (in cc): ");
-        engineCapacity = input.nextInt();
+        this.engineCapacity = input.nextInt();
+
+        this.avgspeed = calculateSpeed();
     }
-*/
+
     @Override
     void displayDetails() {
         System.out.println("Motorcycle Details\n-------------------");
@@ -187,6 +191,7 @@ public class VehicleInventory {
                 for (Vehicle vehicle : inventory) {
                     if (vehicle.vehicleID == VehicleID4Search ) {
                         inventory.remove(vehicle);
+                        System.out.println("vehicle has been removed");
                     }
                     else{
                         System.out.println("vehicle not found/ ID invalid");
@@ -195,19 +200,23 @@ public class VehicleInventory {
                     break;
 
                 case 5:
-                System.out.println("Enter Vehicle ID delete in inventory:");
+                System.out.println("Enter Vehicle ID to update in inventory:");
                 int VehicleID5Search = scanner.nextInt();
 
                 for (Vehicle vehicle : inventory) {
                     if (vehicle.vehicleID == VehicleID5Search ) {
-                        
-
+                        if (vehicle instanceof Car){
+                            
+                        }
+                        else if(vehicle instanceof Motorcycle){
+                            
+                        }  
                     }
+                
                     else{
                         System.out.println("vehicle not found/ ID invalid");
                     }
                 }
-                    // Handle option 5
                     break;
 
                 default:
