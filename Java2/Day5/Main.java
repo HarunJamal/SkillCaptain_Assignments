@@ -76,7 +76,7 @@ public class Main {
 
         do {
             System.out.println("Enter number beside option to select:");
-            System.out.println("1) Add song\n2) Play song\n3) Pause\n4) Stop\n5) Remove Song\n6) Show playlist");
+            System.out.println("1) Add song\n2) Play song\n3) Pause\n4) Stop\n5) Remove Song\n6) Show playlist\n--------------------");
             int choice = input.nextInt();
             switch (choice) {
                 case 1:
